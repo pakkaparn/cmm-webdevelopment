@@ -1,4 +1,4 @@
-# CMM Wed development
+# CMM19 Website development
 
 ## Course outline
 
