@@ -1,0 +1,55 @@
+.navbar-tabs {
+  margin: 0 auto;
+}
+
+.banner .hero-body {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+}
+
+.banner .hero-foot .subbanner {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10rem;
+}
+
+.banner .hero-foot {
+  border-top: .2rem solid white;
+}
+
+.banner .hero-foot .subbanner + .subbanner {
+  border-left: .2rem solid white;
+}
+
+.we-presents .title {
+  margin-bottom: .5rem
+}
+.we-presents .subtitle {
+  margin-bottom: .5rem;
+}
+.we-presents .card {
+  box-shadow: none;
+}
+
+.contributors .image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.contributors .image img {
+  object-fit: none;
+  object-position: center;
+  min-height: 100%
+}
+
+.most-popular .most-popular-item {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 16rem;
+}
