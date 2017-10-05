@@ -1,55 +1,50 @@
-.navbar-tabs {
-  margin: 0 auto;
+header .navbar-tabs {
+  justify-content: center;
 }
 
-.banner .hero-body {
+.highlight {
+  margin-bottom: 0 !important;
+}
+
+.highlight .highlight-item {
+  height: 26rem;
+}
+
+.highlight .highlight-item,
+.thumbnail .thumbnail-item {
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 30rem;
+  color: white;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.banner .hero-foot .subbanner {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 10rem;
+.highlight .highlight-item .title,
+.thumbnail .thumbnail-item .title,
+.highlight .highlight-item .subtitle,
+.thumbnail .thumbnail-item .subtitle {
+  color: inherit;
 }
 
-.banner .hero-foot {
-  border-top: .2rem solid white;
+.thumbnail {
+  border-top: 2px solid white;
 }
 
-.banner .hero-foot .subbanner + .subbanner {
-  border-left: .2rem solid white;
+.thumbnail .thumbnail-item {
+  height: 9rem;
 }
 
-.we-presents .title {
-  margin-bottom: .5rem
+.thumbnail .thumbnail-item + .thumbnail-item {
+  border-left: 2px solid white;
 }
-.we-presents .subtitle {
-  margin-bottom: .5rem;
-}
-.we-presents .card {
+
+
+.we-present .card {
   box-shadow: none;
 }
 
-.contributors .image {
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.contributors .image img {
-  object-fit: none;
-  object-position: center;
-  min-height: 100%
-}
-
-.most-popular .most-popular-item {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 16rem;
+.we-present .card .category {
+  color: #75ce92;
 }
