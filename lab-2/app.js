@@ -1,12 +1,16 @@
 const express = require('express')
-const app = express()
+const { twig } = require('twig')
+
+require('./models')
 
 const homeController = require('./home/home.controller')
 
+const app = express()
+
+app.set('view engine', 'twig')
+
 app.get('/', homeController.index)
 
-app.use('/assets', express.static(__dirname + '/static', { maxAge: 86400000 }))
+app.use('/assets', express.static(__dirname + '/static/assets', { maxAge: 86400000 }))
 
-app.listen(3000, function() {
-  console.log('Server is running on port 3000')
-})
+module.exports = app

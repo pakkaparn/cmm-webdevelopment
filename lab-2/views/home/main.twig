@@ -1,0 +1,89 @@
+{% extends 'layout/base.twig' %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="/assets/home.css">
+{% endblock %}
+
+{% block content %}
+  <main>
+    <section class="banner">
+      <div class="highlight">
+        <div class="columns is-marginless">
+          <a class="column highlight-item" style="background-image: url({{ banner|first.image }});">
+            <div class="container has-text-centered">
+              <h1 class="title is-size-1 has-text-weight-normal">
+                {{ banner|first.title }}
+              </h1>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="thumbnail">
+        <div class="columns is-marginless">
+          {% for item in banner %}
+              {% if loop.first == false %}
+                <a href="#" class="column thumbnail-item" style="background-image: url({{ item.image }});">
+                  <h4 class="title is-size-5 has-text-weight-light has-text-centered">
+                    {{ item.title }}
+                  </h4>
+                </a>
+              {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section we-present">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column has-text-left">
+            <span class="icon">
+              <i class="fa fa-list"></i>
+            </span>
+            LASTEST
+          </div>
+          <div class="column has-text-centered">
+            <h2>WE PRESET</h2>
+          </div>
+          <div class="column has-text-right">
+            SEARCH
+            <span class="icon">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+        </div>
+
+
+
+        <div class="columns is-multiline">
+          {% for item in article %}
+            <a href="#" class="column is-one-third">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="{{ item.image }}" alt="{{ item.title }}">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <h5 class="category">
+                    {{ item.category.name }}
+                  </h5>
+                  <h3 class="title is-spaced is-4">
+                    {{ item.title }}
+                  </h3>
+                  <h4 class="subtitle is-6">
+                    {{ item.contributor.name }}
+                  </h4>
+                  <p>
+                     {{ item.detail }}
+                  </p>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

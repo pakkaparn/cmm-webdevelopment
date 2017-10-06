@@ -1,0 +1,46 @@
+.highlight {
+  margin-bottom: 0 !important;
+}
+
+.highlight .highlight-item {
+  height: 26rem;
+}
+
+.highlight .highlight-item,
+.thumbnail .thumbnail-item {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight .highlight-item .title,
+.thumbnail .thumbnail-item .title,
+.highlight .highlight-item .subtitle,
+.thumbnail .thumbnail-item .subtitle {
+  color: inherit;
+}
+
+.thumbnail {
+  border-top: 2px solid white;
+}
+
+.thumbnail .thumbnail-item {
+  height: 9rem;
+}
+
+.thumbnail .thumbnail-item + .thumbnail-item {
+  border-left: 2px solid white;
+}
+
+
+.we-present .card {
+  box-shadow: none;
+}
+
+.we-present .card .category {
+  color: #75ce92;
+}
