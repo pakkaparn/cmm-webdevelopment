@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CMM 19</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  {% block stylesheet %}{% endblock %}
+</head>
+<body>
+  {% include 'layout/header.twig' ignore missing %}
+  {% block content %}{% endblock %}
+  {% include 'layout/footer.twig' ignore missing %}
+</body>
+</html>
