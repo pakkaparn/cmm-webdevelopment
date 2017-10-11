@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CMM 19 | jQuery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <section class="hero is-danger">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">jQuery</h1>
+                <p class="subtitle">JavaScript with jQuery library.</p>
+            </div>
+        </div>
+        <div class="hero-foot">
+            <div class="container">
+                <nav class="tabs is-boxed">
+                    <ul>
+                        <li><a href="/">JavaScript</a></li>
+                        <li class="is-active"><a href="/jquery">jQuery</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <p class="title has-text-centered">
+                <a href="https://jquery.com/">jQuery</a> is a JavaScript library. it makes javascript easeier.
+            </p>
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                Change HTML Content
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <p class="is-size-2">
+                                Hi, <span id="your_name">What's your name?</span>
+                            </p>
+
+                            <form id="form">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="text" id="name" placeholder="Put your name in here">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-link" type="submit">submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                Event listener
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <span class="button is-static">
+                                        Clicked
+                                    </span>
+                                </p>
+                                <p class="control">
+                                    <input class="input" type="text" id="click-counter" value="0">
+                                </p>
+                                <p class="control">
+                                    <button id="click-listener" class="button is-link">Click here</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                Carousel
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <img src="http://via.placeholder.com/200x200?text=Image+1" alt="Image 1">
+                                </div>
+                                <div class="item">
+                                    <img src="http://via.placeholder.com/200x200?text=Image+2" alt="Image 2">
+                                </div>
+                                <div class="item">
+                                    <img src="http://via.placeholder.com/200x200?text=Image+3" alt="Image 3">
+                                </div>
+                                <div class="item">
+                                    <img src="http://via.placeholder.com/200x200?text=Image+4" alt="Image 4">
+                                </div>
+                                <div class="item">
+                                    <img src="http://via.placeholder.com/200x200?text=Image+5" alt="Image 5">
+                                </div>
+                            </div>
+
+                            <p class="subtitle">
+                                Reference: <a href="https://owlcarousel2.github.io/OwlCarousel2/">Owl Carousel 2</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                Ajax
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <button class="button is-link" id="fetch-data">Fetch data</button>
+                            <div class="ajax-table">
+                                <table id="fetch-data-table" class="table is-striped is-bordered is-fullwidth">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Title</th>
+                                            <th>Body</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Content goes here -->
+                                    </tbody>
+                                </table>
+                                <script id="fetch-data-template" type="text/x-handlebars-template">
+                                    {{#each this}}
+                                        <tr>
+                                            <th class="cell">{{id}}</th>
+                                            <td class="cell">{{title}}</td>
+                                            <td class="cell">{{body}}</td>
+                                        </tr>
+                                    {{/each}}
+                                </script>
+                            </div>
+                            <p class="subtitle">
+                                API Placeholder by: <a href="https://jsonplaceholder.typicode.com/">JSONPlaceholder</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+    <script type="text/javascript" src="/assets/jquery.js"></script>
+</body>
+</html>
