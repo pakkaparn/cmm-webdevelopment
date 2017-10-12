@@ -31,6 +31,8 @@ fetchData.onclick = function() {
     let table = document.querySelector('#fetch-data-table tbody')
     table.innerHTML = ''
 
+    fetchData.classList.add('is-loading')
+
     var request = new XMLHttpRequest()
 
     request.open('GET', 'https://jsonplaceholder.typicode.com/posts', true)
@@ -48,9 +50,15 @@ fetchData.onclick = function() {
             cells[2].innerText = data.body
 
             let clone = document.importNode(template.content, true)
-            var.appendChild(clone)
+            table.appendChild(clone)
 
         })
+
+        fetchData.classList.remove('is-loading')
+    }
+
+    request.onerror = function () {
+        fetchData.classList.remove('is-loading')
     }
 
     request.send()

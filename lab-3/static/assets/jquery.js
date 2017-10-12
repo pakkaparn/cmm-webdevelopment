@@ -40,11 +40,16 @@ $(document).ready(function() {
 
         $.ajax({
             url: 'https://jsonplaceholder.typicode.com/posts',
-            method: 'get'
+            method: 'get',
+            beforeSend: function() {
+                $('#fetch-data').addClass('is-loading')
+            }
         }).done(function(response) {
             var html = template(response)
 
             $('#fetch-data-table tbody').html(html)
+        }).always(function() {
+            $('#fetch-data').removeClass('is-loading')
         })
     })
 
