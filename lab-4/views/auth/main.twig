@@ -1,0 +1,30 @@
+{% extends 'layout/base.twig' %}
+
+{% block content %}
+  <main>
+    <div class="container">
+      <div class="columns is-marginless">
+        <div class="column is-one-third is-offset-one-third">
+          <h1 class="title">Login</h1>
+          <form action="/login" method="post">
+            <div class="field">
+              <div class="control">
+                <input type="text" name="username" class="input" placeholder="Username">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input type="password" name="password" class="input" placeholder="Password">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <button class="button is-link">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
