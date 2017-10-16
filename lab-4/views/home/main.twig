@@ -1,0 +1,10 @@
+{% extends 'layout/base.twig' %}
+
+{% block content %}
+<main>
+  <div class="container">
+    <h1 class="title">I am {{ user.name }}</h1>
+    <a href="/logout" target="_self">Logout</a>
+  </div>
+</main>
+{% endblock %}

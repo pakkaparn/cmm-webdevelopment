@@ -1,14 +1,14 @@
 // Change HTML Content
 const defaultName = document.getElementById('your_name').innerHTML
 document.getElementById('form').onsubmit = function(e) {
-    e.preventDefault()
+  e.preventDefault()
 
-    var name = document.getElementById('name').value.trim()
+  var name = document.getElementById('name').value.trim()
 
-    if(name.length === 0) name = defaultName
-    document.getElementById('your_name').innerText = name + '.'
+  if(name.length === 0) name = defaultName
+  document.getElementById('your_name').innerText = name + '.'
 
-    return false
+  return false
 }
 
 // Event listener
@@ -16,7 +16,7 @@ var clickListener = document.getElementById('click-listener')
 var clickCounter = document.getElementById('click-counter')
 
 clickListener.onclick = function() {
-    clickCounter.value = parseInt(clickCounter.value) + 1
+  clickCounter.value = parseInt(clickCounter.value) + 1
 }
 
 // Carousel
@@ -28,38 +28,38 @@ document.querySelector('.carousel .next').addEventListener('click', () => carous
 // Ajax
 const fetchData = document.getElementById('fetch-data')
 fetchData.onclick = function() {
-    let table = document.querySelector('#fetch-data-table tbody')
-    table.innerHTML = ''
+  let table = document.querySelector('#fetch-data-table tbody')
+  table.innerHTML = ''
 
-    fetchData.classList.add('is-loading')
+  fetchData.classList.add('is-loading')
 
-    var request = new XMLHttpRequest()
+  var request = new XMLHttpRequest()
 
-    request.open('GET', 'https://jsonplaceholder.typicode.com/posts', true)
-    request.onload = function() {
-        if(request.status < 200 || request.status >= 400) return
+  request.open('GET', 'https://jsonplaceholder.typicode.com/posts', true)
+  request.onload = function() {
+    if(request.status < 200 || request.status >= 400) return
 
-        var response = JSON.parse(request.responseText)
+    var response = JSON.parse(request.responseText)
 
-        var template = document.getElementById('fetch-data-template')
-        var cells = template.content.querySelectorAll('.cell')
+    var template = document.getElementById('fetch-data-template')
+    var cells = template.content.querySelectorAll('.cell')
 
-        response.forEach(function(data) {
-            cells[0].innerText = data.id
-            cells[1].innerText = data.title
-            cells[2].innerText = data.body
+    response.forEach(function(data) {
+      cells[0].innerText = data.id
+      cells[1].innerText = data.title
+      cells[2].innerText = data.body
 
-            let clone = document.importNode(template.content, true)
-            table.appendChild(clone)
+      let clone = document.importNode(template.content, true)
+      table.appendChild(clone)
 
-        })
+    })
 
-        fetchData.classList.remove('is-loading')
-    }
+    fetchData.classList.remove('is-loading')
+  }
 
-    request.onerror = function () {
-        fetchData.classList.remove('is-loading')
-    }
+  request.onerror = function () {
+    fetchData.classList.remove('is-loading')
+  }
 
-    request.send()
+  request.send()
 }
